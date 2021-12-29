@@ -2,6 +2,11 @@ import React from 'react'
 import './index.less'
 import fileAction from '@common/utils/file';
 import { getAppPath } from '@src/common/utils/appPath';
+
+// 👇 将组件引入
+import ResumeAction from './ResumeAction';
+import ResumeContent from './ResumeContent';
+import ResumeToolbar from './ResumeToolbar';
 /**
  *
  *
@@ -18,8 +23,16 @@ export default function Resume() {
   })
   
   return (
-    <div>
-      我是简历模块
+    <div styleName="container">
+      <div styleName="header">
+        <ResumeAction />
+      </div>
+      <div styleName="content">
+        <ResumeContent />
+      </div>
+      <div styleName="toolbar">
+        <ResumeToolbar />
+      </div>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import {HashRouter, Route, Switch,Redirect} from 'react-router-dom'
 import Root from '@src/container/root'
 import Resume from '@src/container/resume'
-import ROUTER from '@common/router'
+import ROUTER from '@src/common/constants/router'
 
 function Router(){
   return (

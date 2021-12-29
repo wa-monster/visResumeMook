@@ -21,7 +21,7 @@ function TemplateOne() {
         {/* 左侧 */}
         <div styleName="left">
           <div styleName="avatar">
-            <Avatar />
+            <Avatar src={AvatarImage} alt="头像"/>
           </div>
           <div styleName="fillColor" />
           <div styleName="baseData">

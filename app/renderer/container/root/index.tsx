@@ -3,7 +3,7 @@ import './index.less'
 import {useHistory} from 'react-router'
 import Logo from '@assets/logo.png'
 import { shell} from 'electron'
-import { ROUTE_ENTRY, ROUTER_KEY} from '@common/router'
+import { ROUTE_ENTRY, ROUTER_KEY} from '@src/common/constants/router'
 import {isHttpOrHttpsUrl} from '@common/utils/router'
 
 
