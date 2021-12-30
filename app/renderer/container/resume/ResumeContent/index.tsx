@@ -3,14 +3,20 @@ import './index.less';
 import * as UseTemplateList from './UseTemplate/index'
 import MyScrollBox from '@common/components/MyScrollBox'
 import Messager, { MESSAGE_EVENT_NAME_MAPS } from '@common/messager'
+import { RESUME_TOOLBAR_MAPS } from '@src/common/constants/resume';
 
 import CertificateForm from './UseForm/Certificate';
 import ContactForm from './UseForm/Contact';
 import EducationForm from './UseForm/Education';
+import EvaluationForm from './UseForm/Evaluation';
 import PersonalForm from './UseForm/Personal';
 import SkillForm from './UseForm/Skill';
 import WorkForm from './UseForm/Work';
-import { RESUME_TOOLBAR_MAPS } from '@src/common/constants/resume';
+import ProjectExperience from './UseForm/ProjectExperience';
+import SchoolExperience from './UseForm/SchoolExperience';
+import WorkExperience from './UseForm/WorkExperience';
+
+
 
 function ResumeContent() {
   const [formName,setFormName] = useState('');
@@ -43,9 +49,13 @@ function ResumeContent() {
           {formName === RESUME_TOOLBAR_MAPS.certificate && <CertificateForm onClose={onClose} />}
           {formName === RESUME_TOOLBAR_MAPS.contact && <ContactForm onClose={onClose} />}
           {formName === RESUME_TOOLBAR_MAPS.education && <EducationForm onClose={onClose} />}
+          {formName === RESUME_TOOLBAR_MAPS.evaluation && <EvaluationForm onClose={onClose} />}
           {formName === RESUME_TOOLBAR_MAPS.personal && <PersonalForm onClose={onClose} />}
           {formName === RESUME_TOOLBAR_MAPS.skill && <SkillForm onClose={onClose} />}
           {formName === RESUME_TOOLBAR_MAPS.workPrefer && <WorkForm onClose={onClose} />}
+          {formName === RESUME_TOOLBAR_MAPS.projectExperience && <ProjectExperience onClose={onClose} />}
+          {formName === RESUME_TOOLBAR_MAPS.schoolExperience && <SchoolExperience onClose={onClose} />}
+          {formName === RESUME_TOOLBAR_MAPS.workExperience && <WorkExperience onClose={onClose} />}
         </>
       )}
     </MyScrollBox>
