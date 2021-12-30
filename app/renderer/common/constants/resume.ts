@@ -17,19 +17,19 @@ const RESUME_TOOLBAR_LIST: TSResume.SliderItem[] = [
     key: RESUME_TOOLBAR_MAPS.personal,
     name: '个人信息',
     summary: '更好介绍自己，机会会更多',
-    require:true
+    require: true
   },
   {
     key: RESUME_TOOLBAR_MAPS.education,
     name: '教育信息',
     summary: '介绍你的学校和专业信息',
-    require:true
+    require:false
   },
   {
     key: RESUME_TOOLBAR_MAPS.contact,
     name: '联系方式',
     summary: '少侠，请留下你的联系方式',
-    require:true
+    require:false
   },
   {
     key: RESUME_TOOLBAR_MAPS.workPrefer,

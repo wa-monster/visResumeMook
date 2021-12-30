@@ -15,17 +15,17 @@ import ResumeToolbar from './ResumeToolbar';
  */
 export default function Resume() {
   getAppPath().then((rootPath:string)=>{
-    console.log('应用程序的目录路径为: ', rootPath);
-    console.log('文件读取，内容数据为: ');
-    fileAction.read(`${rootPath}app/renderer/container/resume/index.tsx`).then(data=>{
-      console.log(data);
-    })
+    // console.log('应用程序的目录路径为: ', rootPath);
+    // console.log('文件读取，内容数据为: ');
+    // fileAction.read(`${rootPath}app/renderer/container/resume/index.tsx`).then(data=>{
+    //   console.log(data);
+    // })
   })
   
   return (
     <div styleName="container">
       <div styleName="header">
-        <ResumeAction />
+        {/* <ResumeAction /> */}
       </div>
       <div styleName="content">
         <ResumeContent />

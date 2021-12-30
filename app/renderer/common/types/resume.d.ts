@@ -1,3 +1,6 @@
+/**
+ * @description Resume数据类型定义
+*/
 declare namespace TSResume {
   /**
    * @description 基本信息
