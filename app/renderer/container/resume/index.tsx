@@ -25,7 +25,7 @@ export default function Resume() {
   return (
     <div styleName="container">
       <div styleName="header">
-        {/* <ResumeAction /> */}
+        <ResumeAction />
       </div>
       <div styleName="content">
         <ResumeContent />
