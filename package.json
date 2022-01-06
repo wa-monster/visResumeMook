@@ -2,10 +2,20 @@
   "name": "visresumemook",
   "version": "1.0.0",
   "description": "简历编辑平台",
-  "main": "./app/main/electron.js",
+  "main": "./dist/electron.js",
+  "build": {
+    "appId": "visResumeMook.ElectronReact", 
+    "productName": "VisResumeMook", 
+    "copyright": "Copyright © 2019 ${author}",
+    "files": ["dist/**/*", "package.json", "node_modules/"]
+  },
   "scripts": {
     "start:main": "webpack --config ./webpack/webpack.main.dev.js && electron ./dist/electron.js",
-    "start:render": "webpack-dev-server --config ./webpack/webpack.render.dev.js"
+    "start:render": "webpack-dev-server --config ./webpack/webpack.render.dev.js",
+    "build:main": "webpack --config ./webpack/webpack.main.prod.js",
+    "build:render": "webpack --config ./webpack/webpack.render.prod.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "author": "wa-monster",
   "license": "ISC",
@@ -16,7 +26,6 @@
     "@babel/preset-typescript": "7.13.0",
     "chromedriver": "^96.0.0",
     "classnames": "^2.3.1",
-    "electron": "11.1.1",
     "html2canvas": "^1.3.4",
     "jspdf": "^2.5.0",
     "react": "17.0.2",
@@ -26,6 +35,7 @@
     "react-router-dom": "5.2.0"
   },
   "devDependencies": {
+    "electron": "11.1.1",
     "@babel/cli": "7.14.3",
     "@babel/core": "7.14.3",
     "@babel/plugin-transform-modules-commonjs": "7.14.0",
@@ -42,6 +52,7 @@
     "babel-plugin-react-css-modules": "5.2.6",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "3.0.0",
+    "electron-builder": "^22.14.5",
     "eslint": "^7.26.0",
     "eslint-config-alloy": "^4.1.0",
     "eslint-config-prettier": "^8.3.0",

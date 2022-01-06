@@ -11,7 +11,7 @@ export default function Root() {
   const history = useHistory()
   const onRouterToLink = (router:TSRouter.Item)=>{
     if(isHttpOrHttpsUrl(router.url)){
-      shell.openExternal('router.url')
+      shell.openExternal(router.url)
     }else{
       console.log('跳转到简历页面');
       history.push('/resume')
