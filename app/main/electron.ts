@@ -26,6 +26,7 @@ ipcMain.on('get-root-path',(event,arg)=>{
      height: 800,
      webPreferences: {
        nodeIntegration: true,
+       enableRemoteModule:true
      },
    });
    mainWindow.webContents.openDevTools()

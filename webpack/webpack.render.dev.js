@@ -7,7 +7,7 @@ const devConfig = {
   mode: 'development',
   entry: {
     // 👇 对应渲染进程的 app.tsx 入口文件
-    index: path.resolve(__dirname, '../app/renderer/app.tsx'),
+    index: path.resolve(__dirname, '../app/notes/app.tsx'),
   },
   output: {
     filename: '[name].[hash].js',
@@ -50,7 +50,7 @@ const devConfig = {
   plugins: [
     new HtmlWebpackPlugin({
       // 👇 以此文件为模版，自动生成 HTML
-      template: path.resolve(__dirname, '../app/renderer/index.html'),
+      template: path.resolve(__dirname, '../app/notes/index.html'),
       filename: path.resolve(__dirname, '../dist/index.html'),
       chunks: ['index'],
     }),
